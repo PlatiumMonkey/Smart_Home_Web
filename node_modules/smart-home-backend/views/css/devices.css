@@ -1,0 +1,145 @@
+.devices {
+  text-align: center;
+  
+}
+
+.device-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 577px;
+  overflow-y: scroll;
+}
+
+.device-list::-webkit-scrollbar {
+  display: none;
+}
+
+.device-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 150px;
+  border-radius: 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+
+
+.delete-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  background-color: transparent; /* Nền trong suốt khi không hover */
+  border: 2px solid transparent; /* Không có viền khi không hover */
+  padding: 5px; /* Khoảng cách để dễ nhấn */
+  border-radius: 50%; /* Tạo hình tròn */
+  transition: background-color 0.3s, border-color 0.3s; /* Thêm hiệu ứng mượt mà */
+}
+
+.delete-btn:hover {
+  background-color: rgba(255, 0, 0, 0.3); /* Nền màu đỏ mờ khi hover */
+  border-color: rgba(255, 0, 0, 0.5); /* Viền màu đỏ mờ khi hover */
+}
+
+
+.device-card.red .device-card-above {
+  background-color: #ff8a8a;
+  color: white;
+}
+
+.device-card.teal .device-card-above {
+  background-color: #7ed5d8;
+  color: white;
+}
+
+.device-card.navy .device-card-above {
+  background-color: #2e3d55;
+  color: #fff;
+}
+
+.device-card .profile-pic {
+  width: 87px;
+  height: 87px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 20px auto;
+}
+
+.add-device {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  border: 2px dashed #ccc;
+  border-radius: 40px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.add-device span {
+  font-size: 50px;
+  color: #ccc;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-content input,
+.modal-content select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-btn {
+  background-color: #7ed5d8;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #f2f2f2;
+  color: #333;
+}

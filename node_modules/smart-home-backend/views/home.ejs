@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/generation.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <!-- <div class="logo"><img src="./image/smart-house.png" alt="" /></div> -->
+      <ul class="menu">
+        <li class="active">
+          <a href="/home"
+            >
+            <div class="sidebar-button">
+              <img src="./image/smart-house.png" alt="Smart-house Icon" />
+            <div class="button-sidebar-name">Smart-house</div>
+            </div>
+            </a
+          >
+        </li>
+        <li >
+          <a href="/viewrooms">
+            <div class="sidebar-button">
+              <img src="./image/room.png" alt="" />
+              <div class="button-sidebar-name">View Rooms</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="/devices"
+            >
+           <div class="sidebar-button">
+            <img src="./image/device.png" alt="Device" />
+            <div class="button-sidebar-name">Device</div>
+           </div>
+            </a
+          >
+        </li>
+        <li>
+          <a href="/statistics">
+            <div class="sidebar-button">
+              <img src="./image/statistic.png" alt="" />
+              <div class="button-sidebar-name">Statistics</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="/accounts">
+            <div class="sidebar-button">
+              <img src="./image/member.png" alt="" />
+              <div class="button-sidebar-name">Members</div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="/rooms">
+            <div class="sidebar-button">
+              <img src="./image/door_small.png" alt="Member Icon"><div class="button-sidebar-name">Rooms</div>
+            </div>
+          </a>
+        </li>
+        
+      </ul>
+    </aside>
+    <main class="content">
+      <header class="header">
+        <input type="text" placeholder="Search" class="search-bar">
+        <div class="header-icons">
+          <span class="icon-settings"><img src="./image/setting.png" alt="Settings Icon"></span>
+          <span class="icon-bell"><img src="./image/bell.png" alt="Notifications Icon"></span>
+          <span class="icon-profile"><img src="./image/myAccount.png" alt="Profile Icon"></span>
+        </div>
+      </header>
+      <section class="homepage">
+        <h1 class="title">Welcome!</h1>
+
+        <div class="dashboard">
+          <div class="info-block">
+            <h2 id="current-time">Loading Time...</h2> <!-- Hiển thị thời gian -->
+            <p>Time</p>
+          </div>
+          <div class="info-block">
+            <h2 id="temperature">Loading...</h2> <!-- Hiển thị nhiệt độ -->
+            <p>Outdoor Temperature</p>
+          </div>
+          <div class="info-block">
+            <h2 id="humidity">Loading...</h2> <!-- Hiển thị độ ẩm -->
+            <p>Humidity</p>
+          </div>
+        </div>
+        <section class="Sinhvien">
+          <h1 class="title">Sinh viên</h1>
+          <div class="sinhvien-list">
+
+            <div class="sinhvien-card red">
+              <div class="sinhvien-card-above">
+                <div class="profile-pic"></div>
+                <h2>Nguyễn Văn Thuần</h2>
+                <p class="role">Trưởng nhóm</p>
+              </div>
+              <div class="sinhvien-card-under">
+                <p>MSSV:20240651E</p>
+              </div>
+            </div>
+
+            <div class="sinhvien-card teal">
+              <div class="sinhvien-card-above">
+                <div class="profile-pic"></div>
+                <h2>Nguyễn Bá Thanh Minh</h2>
+                <p class="role">Thành viên</p>
+              </div>
+              <div class="sinhvien-card-under">
+                <p>MSSV:20240484E</p>
+              </div>
+            </div>
+
+            <div class="sinhvien-card yellow">
+              <div class="sinhvien-card-above">
+                <div class="profile-pic"></div>
+                <h2>Phạm Ngọc Khánh</h2>
+                <p class="role">Thành viên</p>
+              </div>
+              <div class="sinhvien-card-under">
+                <p>MSSV:20192936</p>
+              </div>
+            </div>
+
+            <div class="sinhvien-card navy">
+              <div class="sinhvien-card-above">
+                <div class="profile-pic"></div>
+                <h2>Phạm Văn Hưởng</h2>
+                <p class="role">Thành viên</p>
+              </div>
+              <div class="sinhvien-card-under">
+                <p>MSSV:20240445E</p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+    </main>
+  </div>
+
+  <script>
+    const apiKey = "0bd0607e8e128279bb3aff3944584c6b"; // Thay bằng API Key của bạn
+    const city = "Ha Noi"; // Thành phố bạn muốn lấy dữ liệu
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+
+    // Hàm cập nhật thời gian thực
+    function updateTime() {
+      const now = new Date();
+      const hours = now.getHours().toString().padStart(2, "0");
+      const minutes = now.getMinutes().toString().padStart(2, "0");
+      const seconds = now.getSeconds().toString().padStart(2, "0");
+      document.getElementById("current-time").innerText = `${hours}:${minutes}:${seconds}`;
+    }
+
+    // Hàm lấy dữ liệu thời tiết từ API
+    async function fetchWeatherData() {
+      try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+
+        // Cập nhật nhiệt độ và độ ẩm vào các ô tương ứng
+        document.getElementById("temperature").innerText = `${data.main.temp}°C`;
+        document.getElementById("humidity").innerText = `${data.main.humidity}%`;
+      } catch (error) {
+        console.error("Error fetching weather data:", error);
+        document.getElementById("temperature").innerText = "Error";
+        document.getElementById("humidity").innerText = "Error";
+      }
+    }
+
+    // Gọi hàm khi tải trang
+    fetchWeatherData();
+    updateTime(); // Hiển thị thời gian ngay lập tức
+    setInterval(updateTime, 1000); // Cập nhật thời gian mỗi giây
+  </script>
+
+</body>
+<script src="menu.js" defer></script>
+</html>

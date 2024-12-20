@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Statistics</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/generation.css" />
+    <link rel="stylesheet" href="css/statistics.css" />
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <!-- <div class="logo"><img src="./image/smart-house.png" alt="" /></div> -->
+        <ul class="menu">
+          <li>
+            <a href="/home"
+              >
+              <div class="sidebar-button">
+                <img src="./image/smart-house.png" alt="Smart-house Icon" />
+              <div class="button-sidebar-name">Smart-house</div>
+              </div>
+              </a
+            >
+          </li>
+          <li >
+            <a href="/viewrooms">
+              <div class="sidebar-button">
+                <img src="./image/room.png" alt="" />
+                <div class="button-sidebar-name">View Rooms</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="/devices"
+              >
+             <div class="sidebar-button">
+              <img src="./image/device.png" alt="Device" />
+              <div class="button-sidebar-name">Device</div>
+             </div>
+              </a
+            >
+          </li>
+          <li class="active">
+            <a href="/statistics">
+              <div class="sidebar-button">
+                <img src="./image/statistic.png" alt="" />
+                <div class="button-sidebar-name">Statistics</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="/accounts">
+              <div class="sidebar-button">
+                <img src="./image/member.png" alt="" />
+                <div class="button-sidebar-name">Members</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="/rooms">
+              <div class="sidebar-button">
+                <img src="./image/door_small.png" alt="Member Icon"><div class="button-sidebar-name">Rooms</div>
+              </div>
+            </a>
+          </li>
+          
+        </ul>
+      </aside>
+      <main class="content">
+        <header class="header">
+          <input type="text" placeholder="Search" class="search-bar" />
+          <div class="header-icons">
+            <span class="icon-settings"
+              ><img src="./image/setting.png" alt=""
+            /></span>
+            <span class="icon-bell"><img src="/image/bell.png" alt="" /></span>
+            <span class="icon-profile"
+              ><img src="./image/myAccount.png" alt=""
+            /></span>
+          </div>
+        </header>
+        <section class="statistics">
+          <h1 class="title">Statistics</h1>
+          <div class="stats-grid">
+            <div class="chart-card">
+              <h2>Electricity</h2>
+              <div class="chart pink"></div>
+            </div>
+            <div class="chart-card">
+              <h2>Water</h2>
+              <div class="chart teal"></div>
+            </div>
+            <div class="chart-card">
+              <h2>Waste Management</h2>
+              <div class="chart navy"></div>
+            </div>
+            <div class="chart-card softing-device">
+              <div class="chart-card softing">
+                <h2>Sorting</h2>
+                <div class="pie-chart">
+                  <div class="legend">
+                    <span class="dot red"></span> Paper<br />
+                    <span class="dot blue"></span> Glass<br />
+                    <span class="dot green"></span> Plastic
+                  </div>
+                </div>
+              </div>
+              <div class="chart-card device">
+                <h2>Devices</h2>
+                <div class="devices-grid">
+                  <div class="device">TV</div>
+                  <div class="device">Kettle</div>
+                  <div class="device">Washer</div>
+                  <div class="device">Fridge</div>
+                  <div class="device">Stove</div>
+                  <div class="device">PC</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="menu.js" defer></script>
+  </body>
+</html>

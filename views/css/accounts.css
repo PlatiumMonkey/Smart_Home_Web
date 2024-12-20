@@ -1,0 +1,129 @@
+
+
+.members {
+  text-align: center;
+}
+
+.member-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 577px;
+  overflow-y: scroll;
+}
+
+.member-list::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+.member-card {
+  position: relative;
+  height: 314px;
+  width: 250px;
+  background-color: #fff;
+  border-radius: 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.member-card .member-card-above {
+  height: 60%;
+  width: 100%;
+  padding: 10px;
+}
+
+.member-card.red .member-card-above {
+  background-color: #ff8a8a;
+}
+
+.member-card.teal .member-card-above {
+  background-color: #7ed5d8;
+}
+
+.member-card.navy .member-card-above {
+  background-color: #2e3d55;
+  color: #fff;
+}
+
+.member-card .profile-pic {
+  width: 87px;
+  height: 87px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 20px auto;
+}
+
+.add-member {
+  height: 314px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  border: 2px dashed #ccc;
+  border-radius: 40px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.add-member span {
+  font-size: 50px;
+  color: #ccc;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-content input,
+.modal-content select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-btn {
+  background-color: #7ed5d8;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #f2f2f2;
+  color: #333;
+}

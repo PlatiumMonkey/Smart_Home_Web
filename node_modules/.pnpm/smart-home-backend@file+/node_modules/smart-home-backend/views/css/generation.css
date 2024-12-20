@@ -1,0 +1,184 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+html,
+body {
+  overflow: hidden; /* Ngăn cuộn */
+  height: 100%; /* Đảm bảo chiều cao đầy đủ */
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 15%;
+  background-color: #62c3c7;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.menu {
+  list-style: none;
+  width: 100%;
+}
+
+.menu li {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.menu li a {
+  height: 100px;
+  text-decoration: none;
+  color: #fff5f5;
+  font-size: 18px;
+  display: block;
+  padding: 10px;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu li.active a {
+  background-color: #4aa2a5;
+  border-radius: 10px;
+}
+
+.menu li a:hover {
+  background-color: #4aa2a5;
+  border-radius: 10px;
+}
+
+.content {
+  width: 80%;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  /* padding-right: 40px; */
+}
+
+.search-bar {
+  padding: 10px;
+  width: 175px;
+  height: 34px;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+}
+
+.header-icons span {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  border-radius: 50%;
+}
+
+.title {
+  text-align: left;
+  margin-left: 20px;
+  font-size: 48px;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  background-color: transparent; /* Nền trong suốt khi không hover */
+  border: 2px solid transparent; /* Không có viền khi không hover */
+  padding: 5px; /* Khoảng cách để dễ nhấn */
+  border-radius: 50%; /* Tạo hình tròn */
+  transition: background-color 0.3s, border-color 0.3s; /* Thêm hiệu ứng mượt mà */
+}
+
+.delete-btn:hover {
+  background-color: rgba(255, 0, 0, 0.3); /* Nền màu đỏ mờ khi hover */
+  border-color: rgba(255, 0, 0, 0.5); /* Viền màu đỏ mờ khi hover */
+}
+
+.device-card.red .device-card-above {
+  background-color: #ff8a8a;
+  color: white;
+}
+
+.confirm-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.confirm-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.confirm-content p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.confirm-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.confirm-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.confirm-buttons .confirm-yes {
+  background-color: #d9534f;
+  color: white;
+}
+
+.confirm-buttons .confirm-no {
+  background-color: #5bc0de;
+  color: white;
+}

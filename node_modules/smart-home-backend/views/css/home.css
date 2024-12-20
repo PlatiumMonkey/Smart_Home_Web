@@ -1,0 +1,135 @@
+ /* Homepage styles */
+  .homepage .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .info-block {
+    background: #fff;
+    padding: 20px;
+    border-radius: 40px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .info-block h2 {
+    font-size: 22px;
+    color: #2e3d55;
+  }
+  
+  .info-block p {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Controls section */
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .control-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 40px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .control-item p {
+    color: #333;
+  }
+  
+  .progress-circle {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2e3d55;
+  }
+  
+  .progress-bar {
+    margin-top: 10px;
+    background: linear-gradient(90deg, #ff8a8a 0%, #7ed5d8 100%);
+    color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .sinhvien {
+    text-align: center;
+  }
+  
+  .sinhvien-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 577px;
+    overflow-y: scroll;
+  }
+  
+  .sinhvien-list::-webkit-scrollbar {
+    display: none;
+  }
+  
+  
+  
+  .sinhvien-card {
+    height: 314px;
+    width: 250px;
+    background-color: #fff;
+    border-radius: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .sinhvien-card-under{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sinhvien-card .sinhvien-card-above {
+    height: 60%;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .sinhvien-card.red .sinhvien-card-above {
+    background-color: #ff8a8a;
+  }
+  
+  .sinhvien-card.teal .sinhvien-card-above {
+    background-color: #7ed5d8;
+  }
+  
+  .sinhvien-card.navy .sinhvien-card-above {
+    background-color: #2e3d55;
+    color: #fff;
+  }
+
+  .sinhvien-card.yellow .sinhvien-card-above {
+    background-color: #eeeb2b;
+  }
+
+  .sinhvien-card .profile-pic {
+    width: 87px;
+    height: 87px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 20px auto;
+  }
